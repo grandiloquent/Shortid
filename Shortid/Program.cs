@@ -78,7 +78,7 @@ namespace Shortid
             char[] array = str.ToCharArray();
             int n = array.Length;
             Random rand = new Random(Guid.NewGuid().GetHashCode());
-            
+
             while (n > 1)
             {
                 n--;
@@ -106,19 +106,6 @@ namespace Shortid
             return alphabetShuffled[index].ToString();
         }
 
-//        function encode(lookup, number) {
-//            var loopCounter = 0;
-//            var done;
-//
-//            var str = '';
-//
-//            while (!done) {
-//                str = str + lookup( ( (number >> (4 * loopCounter)) & 0x0f ) | randomByte() );
-//                done = number < (Math.pow(16, loopCounter + 1 ) );
-//                loopCounter++;
-//            }
-//            return str;
-//        }
         public string Generate()
         {
             var str = string.Empty;
